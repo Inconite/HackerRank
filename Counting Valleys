@@ -1,0 +1,30 @@
+```
+
+import java.util.*;
+
+class Solution{
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String s = sc.next();
+
+        int valleys = 0;
+        int level = 0;
+
+        for(int i = 0; i < s.length(); i++){
+            if(s.charAt(i) == 'D'){
+                level--;
+            }
+            else if(s.charAt(i) == 'U'){
+                level++;
+                if(level == 0){
+                    valleys += 1;
+                }
+            }
+        }
+        System.out.println(valleys);
+    }
+}
+
+```
